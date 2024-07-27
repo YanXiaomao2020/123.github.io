@@ -1,1 +1,176 @@
-CSS
+body{
+    overflow-y: scroll;
+}
+
+
+
+/* 背景图 */
+.bg {
+    width: 100%;
+    height: 100%;
+    background: url("../images/index01.jpg") center/cover no-repeat;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+
+/* ========================================================================================= */
+/* 页眉菜单栏样式 */
+header {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: black;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 标题logo样式 */
+.header_logo {
+    width: 50%;
+    font-size: 15px;
+    color: #fff;
+    font-family: "chunfeng";
+    text-shadow: 3px 5px 8px #ed8881;
+}
+
+/* 菜单框架 */
+.header_btnbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 导航菜单按钮 */
+.item_btn {
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    font-size: 20px;
+    font-family: "chunfeng";
+    border-radius: 50px;
+    margin-right: 20px;
+    border: none;
+    background-color: #434955;
+    box-shadow: 0px 0px 5px 1px #fdfae8;
+}
+
+/* 鼠标悬停样式 */
+.item_btn:hover {
+    background-color: #ffffff;
+    color: #434955;
+    transition: all 0.4s ease-in-out;
+    cursor: url('https://www.liuzehe.top/upload/bkphotos/pointer.cur'), pointer;
+}
+
+/* ======================================================================================== */
+/* 定义mysql框架 */
+.container_mysql {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: linear-gradient(135deg, #dc86fb, #12cfe0);
+}
+
+/* 卡片样式 */
+.card {
+    height: 50%;
+    width: 400px;
+    border-radius: 50px;
+    position: relative;
+    top: 120px;
+    left: 50px;
+    transition: 0.5s ease-in-out;
+    transform-style: preserve-3d;
+    background: linear-gradient(135deg, #00ffd6, #08e260);
+    box-shadow: 40px 50px 25px #05471100, 0px 30px 30px #02140033;
+}
+
+/* 卡片右上角波纹box */
+.wavy {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform-style: preserve-3d;
+}
+
+/* 波纹圆圈样式 */
+.wavy .circle {
+    position: absolute;
+    top: calc(var(--i) * 2px + 8px);
+    right: calc(var(--i) * 2px + 8px);
+    width: calc(170px - var(--i) * 30px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #00f9cd33;
+    box-shadow: -10px 10px 20px #64646f33;
+    transition: 0.5s ease-in-out;
+    backdrop-filter: blyr(5px);
+    transform: translate3d(0, 0, calc((var(--i) + 1) * 20px));
+    transition-delay: calc(var(--i) * 0.4s);
+}
+
+/* 玻璃背景样式 */
+.glass {
+    transform-style: preserve-3d;
+    position: absolute;
+    inset: 8px;
+    background: linear-gradient(#ffffff59, #ffffffd0);
+    border-radius: 55px;
+    border-top-right-radius: 100%;
+    border-left: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    transition: 0.5s ease-in-out;
+    transform: translate3d(0, 0, 25px);
+}
+
+/* 卡片内容样式 */
+.glass_title {
+    padding: 120px 60px 0 30px;
+    font-family: "chunfeng";
+}
+
+/* 标题样式 */
+.title_MySQL {
+    font-size: 60px;
+    margin-left: -30px;
+}
+
+/* 段落样式 */
+.glass_title p {
+    margin-top: 10px;
+    color: #00a15d;
+    font-size: 20px;
+}
+
+
+/* 鼠标悬停时卡片样式 */
+.card:hover {
+    transform: rotate3d(1, 2, 0, 30deg);
+    box-shadow: 40px 50px 25px #0547110d, 0px 25px 30px #05471111;
+}
+
+/* 右侧宣传语 */
+.container_mysql_content {
+    width: 50%;
+    position: absolute;
+    top: 30%;
+    right: 10px;
+    font-size: 30px;
+    font-family: "katong";
+    color: #e5603b;
+}
+
+
